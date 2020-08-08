@@ -7,8 +7,9 @@ class app(object):
         URL = f"https://api.github.com/users/{username}/events/public"
 
         response = requests.get(URL).json()
-        return response
+        email = response[0]["payload"]["commits"][0]["author"]["email"]
+        return email
 
 if __name__ == "__main__":
-    username = "udhavpawar"
+    username = input("Enter GitHub username: ")
     print(app().getEmail(username))
