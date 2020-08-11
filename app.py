@@ -9,10 +9,12 @@ class app(object):
 
     # check input github username exists
     def checkUserExists(self):
-        try:
+        status_code = requests.get(f"https://api.github.com/users/{self.gitUserName}").status_code
+        if status_code == 200:
             return self.getEmail()
-        except Exception as error:
-            return str(error)
+        else:
+            return f'nProvided github username: "{self.gitUserName}" does not exists.\n'
+
 
     # get email address
     def getEmail(self):
