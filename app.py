@@ -1,4 +1,5 @@
-import requests
+import requests # for API requests
+import time # for measuring execution time
 
 class app(object):
     def __init__(self, username):
@@ -9,12 +10,19 @@ class app(object):
 
     # check input github username exists
     def checkUserExists(self):
-        status_code = requests.get(f"https://api.github.com/users/{self.gitUserName}").status_code
+        githubAPI = f"https://api.github.com/users/{self.gitUserName}"
+        status_code = requests.get(githubAPI).status_code
+        response = requests.get(githubAPI).json()
+        # user exists and github API rate limit is not exceeded
         if status_code == 200:
-            return self.getEmail()
+            start_time = time.time()
+            return "\n{} [{:.2f}s]\n".format(self.getEmail(),time.time() - start_time)
+        # user exists and github API rate limit is exceeded for the user
+        elif str(response["message"]).startswith("API"):
+            return f'\n{response["message"]}\n\n{response["documentation_url"]}\n'
+        # user does not exist
         else:
             return f'\nProvided github username: "{self.gitUserName}" does not exists.\n'
-
 
     # get email address
     def getEmail(self):
@@ -32,7 +40,7 @@ class app(object):
                     emails.append(payload_email)
 
         if len(emails) != 0:
-            return "\n" + ", ".join(map(str, emails)) + "\n"
+            return ", ".join(map(str, emails))
 
         # check user's non-forked public repos
         reposURL = f"https://api.github.com/users/{self.gitUserName}/repos"
@@ -48,10 +56,10 @@ class app(object):
                         emails.append(commit_email)
 
         if len(emails)!= 0:
-            return "\n" + ", ".join(map(str, emails)) + "\n"
+            return ", ".join(map(str, emails))
         else:
-            return f'\nUser: "{self.gitUserName}" has no public commits or a non-forked public repo\n'
+            return f'User: "{self.gitUserName}" has no public commits or a non-forked public repo'
 
 if __name__ == "__main__":
-    username = input("Enter GitHub username: ")
+    username = input("\nEnter GitHub username: ")
     print(app(username))
