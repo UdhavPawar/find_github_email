@@ -28,20 +28,7 @@ class app(object):
     def getEmail(self):
         # result
         emails = []
-
-        # check user's public commits
-        commitsURL = f"https://api.github.com/users/{self.gitUserName}/events/public"
-        payloads = requests.get(commitsURL).json()
-        for payload in payloads:
-            if payload["type"] == "PushEvent":
-                data = payload["payload"]
-                payload_email = data["commits"][0]["author"]["email"]
-                if payload_email not in emails:
-                    emails.append(payload_email)
-
-        if len(emails) != 0:
-            return ", ".join(map(str, emails))
-
+    
         # check user's non-forked public repos
         reposURL = f"https://api.github.com/users/{self.gitUserName}/repos"
         repos = requests.get(reposURL).json()
@@ -54,6 +41,19 @@ class app(object):
                     commit_email = commit["commit"]["author"]["email"]
                     if commit_email not in emails:
                         emails.append(commit_email)
+
+        if len(emails) != 0:
+            return ", ".join(map(str, emails))
+
+        # check user's public commits
+        commitsURL = f"https://api.github.com/users/{self.gitUserName}/events/public"
+        payloads = requests.get(commitsURL).json()
+        for payload in payloads:
+            if payload["type"] == "PushEvent":
+                data = payload["payload"]
+                payload_email = data["commits"][0]["author"]["email"]
+                if payload_email not in emails:
+                    emails.append(payload_email)
 
         if len(emails)!= 0:
             return ", ".join(map(str, emails))
