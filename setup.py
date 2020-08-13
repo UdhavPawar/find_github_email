@@ -5,6 +5,7 @@ setup(
     packages=find_packages(),
     version="1.0",
     description="Find any GitHub user’s email address",
+    long_description=open('README.md').read(),
     author="Udhav Pawar",
     author_email="upawar78@gmail.com",
     url="https://github.com/UdhavPawar/find_github_email",
@@ -12,5 +13,5 @@ setup(
     keywords=["github-profile", "github-email", "python3", "github-api", "github", "email", "pypi", "pypi-package"],
     license="MIT",
     include_package_data = True,
-    install_requires=["requests","time"],
+    install_requires=["time","requests==2.24.0"],
 )
