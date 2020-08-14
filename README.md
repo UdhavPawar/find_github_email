@@ -5,19 +5,23 @@
 - However, some of the best profiles simply have no contact information apart from a GitHub username. 
 - Hence, this python package is targetted for finding almost any GitHub user's email address, so you can easliy network/reach out to your favorite developers :bowtie:
 
-## Installation
+## Package Installation
 
 To install this python package, use the package manager [pip](https://pypi.org/project/find-github-email/).
-![Install Package](./svgs/install.svg)
-> Facing an issue? Check the [Issues](https://github.com/UdhavPawar/find_github_email/issues) section or open a new issue.
+
+![python](./svgs/py2install.svg)
+![python3](./svgs/py3install.svg)
 
 ```bash
 pip install find-github-email
+python -m pip install find-github-email
 ```
 OR 
 ```bash
+pip3 install find-github-email
 python3 -m pip install find-github-email
 ```
+> Facing an issue? Check the [Issues](https://github.com/UdhavPawar/find_github_email/issues) section or open a new issue.
 
 ## Usage
 ![Clone Repo](./svgs/clone.svg)
