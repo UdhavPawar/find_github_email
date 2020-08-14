@@ -1,1 +1,1 @@
-from main import find
+from find_github_email.main import find
