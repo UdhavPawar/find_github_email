@@ -61,7 +61,7 @@ class findGitEmail(object):
         if len(emails)!= 0:
             return emails
         else:
-            return emails.append(f'User: "{username}" has no public commits or a non-forked public repo')
+            return emails.append(f'User: "{self.git_username}" has no public commits or a non-forked public repo')
 
 def find(username):
     finder_response = findGitEmail(username).get()
@@ -76,5 +76,5 @@ def find(username):
             'found' : False,
             'error_message' : finder_response
         }
-        
+
     return response
