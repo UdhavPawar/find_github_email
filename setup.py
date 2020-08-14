@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name="find_github_email",
     packages=find_packages(),
-    version="1.2",
+    version="1.2.1",
     description="Find any GitHub user’s email address",
     long_description=open('README.md').read(),
     author="Udhav Pawar",
