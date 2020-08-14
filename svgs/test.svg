@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="terminal" baseProfile="full" viewBox="0 0 720 852" width="720" version="1.1">
+    <defs>
+        <termtosvg:template_settings xmlns:termtosvg="https://github.com/nbedos/termtosvg">
+            <termtosvg:screen_geometry columns="90" rows="50"/>
+            <termtosvg:animation type="css"/>
+        </termtosvg:template_settings>
+        <style type="text/css" id="generated-style"><![CDATA[#screen {
+                font-family: 'DejaVu Sans Mono', monospace;
+                font-style: normal;
+                font-size: 14px;
+            }
+
+        text {
+            dominant-baseline: text-before-edge;
+            white-space: pre;
+        }
+    
+            :root {
+                --animation-duration: 5946ms;
+            }
+
+            @keyframes roll {
+                0.000%{transform:translateY(0px)}
+41.759%{transform:translateY(-884px)}
+42.852%{transform:translateY(-1768px)}
+43.996%{transform:translateY(-2652px)}
+44.046%{transform:translateY(-3536px)}
+44.063%{transform:translateY(-4420px)}
+83.182%{transform:translateY(-5304px)}
+100.000%{transform:translateY(-5304px)}
+            }
+
+            #screen_view {
+                animation-duration: 5946ms;
+                animation-iteration-count:infinite;
+                animation-name:roll;
+                animation-timing-function: steps(1,end);
+                animation-fill-mode: forwards;
+            }
+        ]]></style>
+        <style type="text/css" id="user-style">
+            /* The colors defined below are the default 16 colors used for rendering text of the terminal. Adjust
+               them as needed.
+               PowerShell colors based on https://en.wikipedia.org/wiki/ANSI_escape_code#Colors */
+            .foreground {fill: #cccccc;}
+            .background {fill: #0c0c0c;}
+            .color0 {fill: #0c0c0c;}
+            .color1 {fill: #c50f1f;}
+            .color2 {fill: #13a10e;}
+            .color3 {fill: #c19c00;}
+            .color4 {fill: #0037da;}
+            .color5 {fill: #881798;}
+            .color6 {fill: #3a96dd;}
+            .color7 {fill: #cccccc;}
+            .color8 {fill: #767676;}
+            .color9 {fill: #e74856;}
+            .color10 {fill: #16c60c;}
+            .color11 {fill: #f9f1a5;}
+            .color12 {fill: #3b78ff;}
+            .color13 {fill: #b4009e;}
+            .color14 {fill: #61d6d6;}
+            .color15 {fill: #f2f2f2;}
+        </style>
+    </defs>
+    <svg id="screen" width="720" height="850" viewBox="0 0 720 850" preserveAspectRatio="xMidYMin slice">
+    <rect class="background" height="100%" width="100%" x="0" y="0"/><defs><g id="g1"><text x="0" textLength="328" class="foreground">The default interactive shell is now zsh.</text></g><g id="g2"><text x="0" textLength="520" class="foreground">To update your account to use zsh, please run `chsh -s /bin/zsh`.</text></g><g id="g3"><text x="0" textLength="552" class="foreground">For more details, please visit https://support.apple.com/kb/HT208050.</text></g><g id="g4"><text x="0" textLength="80" class="color6">udhavpawar</text><text x="80" textLength="8" class="foreground">@</text><text x="88" textLength="48" class="color2">udhav:</text><text x="136" textLength="56" font-weight="bold" class="color11">~/demos</text><text x="192" textLength="16" class="foreground">$ </text><text x="208" textLength="8" class="background"> </text></g><g id="g5"><text x="0" textLength="80" class="color6">udhavpawar</text><text x="80" textLength="8" class="foreground">@</text><text x="88" textLength="48" class="color2">udhav:</text><text x="136" textLength="56" font-weight="bold" class="color11">~/demos</text><text x="192" textLength="24" class="foreground">$ l</text><text x="216" textLength="8" class="background"> </text></g><g id="g6"><text x="0" textLength="80" class="color6">udhavpawar</text><text x="80" textLength="8" class="foreground">@</text><text x="88" textLength="48" class="color2">udhav:</text><text x="136" textLength="56" font-weight="bold" class="color11">~/demos</text><text x="192" textLength="32" class="foreground">$ ls</text><text x="224" textLength="8" class="background"> </text></g><g id="g7"><text x="0" textLength="80" class="color6">udhavpawar</text><text x="80" textLength="8" class="foreground">@</text><text x="88" textLength="48" class="color2">udhav:</text><text x="136" textLength="56" font-weight="bold" class="color11">~/demos</text><text x="192" textLength="32" class="foreground">$ ls</text></g><g id="g8"><text x="0" textLength="8" class="background"> </text></g><g id="g9"><text x="0" textLength="24" font-weight="bold" class="color12">bak</text><text x="24" textLength="112" class="foreground">      demo.yml</text></g><g id="g10"><text x="0" textLength="80" class="color6">udhavpawar</text><text x="80" textLength="8" class="foreground">@</text><text x="88" textLength="48" class="color2">udhav:</text><text x="136" textLength="56" font-weight="bold" class="color11">~/demos</text><text x="192" textLength="48" class="foreground">$ exit</text></g></defs><g id="screen_view"><g><use xlink:href="#g1" y="17"/><use xlink:href="#g2" y="34"/><use xlink:href="#g3" y="51"/><rect x="208" y="68" width="8" height="17" class="foreground"/><use xlink:href="#g4" y="68"/></g><g><use xlink:href="#g1" y="901"/><use xlink:href="#g2" y="918"/><use xlink:href="#g3" y="935"/><rect x="216" y="952" width="8" height="17" class="foreground"/><use xlink:href="#g5" y="952"/></g><g><use xlink:href="#g1" y="1785"/><use xlink:href="#g2" y="1802"/><use xlink:href="#g3" y="1819"/><rect x="224" y="1836" width="8" height="17" class="foreground"/><use xlink:href="#g6" y="1836"/></g><g><use xlink:href="#g1" y="2669"/><use xlink:href="#g2" y="2686"/><use xlink:href="#g3" y="2703"/><use xlink:href="#g7" y="2720"/><rect x="0" y="2737" width="8" height="17" class="foreground"/><use xlink:href="#g8" y="2737"/></g><g><use xlink:href="#g1" y="3553"/><use xlink:href="#g2" y="3570"/><use xlink:href="#g3" y="3587"/><use xlink:href="#g7" y="3604"/><use xlink:href="#g9" y="3621"/><rect x="0" y="3638" width="8" height="17" class="foreground"/><use xlink:href="#g8" y="3638"/></g><g><use xlink:href="#g1" y="4437"/><use xlink:href="#g2" y="4454"/><use xlink:href="#g3" y="4471"/><use xlink:href="#g7" y="4488"/><use xlink:href="#g9" y="4505"/><rect x="208" y="4522" width="8" height="17" class="foreground"/><use xlink:href="#g4" y="4522"/></g><g><use xlink:href="#g1" y="5321"/><use xlink:href="#g2" y="5338"/><use xlink:href="#g3" y="5355"/><use xlink:href="#g7" y="5372"/><use xlink:href="#g9" y="5389"/><use xlink:href="#g10" y="5406"/><rect x="0" y="5423" width="8" height="17" class="foreground"/><use xlink:href="#g8" y="5423"/></g></g></svg>
+</svg>
