@@ -91,6 +91,24 @@ print(f"\n{response}\n")
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change/fix.
 
 ## Package
+
+
+How the code works:
+```
+case 1 :
+- locate users's non-forked repo
+- for that repo, scrape commits json object and iterate over each commit
+- for each commit, the commit URL will become: https://github.com/username/public_repo/commit/commit_id
+- option 1: append ".patch" to URL so it becomes https://github.com/username/public_repo/commit/commit_id.patch
+- option 2: looks for author json object
+- then simply filter email from author object.
+```
+```
+case 2 : 
+- check if the user has a commit in public repo using: https://api.github.com/users/{username}/events/public
+- then iterate over each payload, for each payload scrape it's commits, iterate over each commit and filter email. 
+- If so grep email from there.
+```
 > package PyPi project: [find-github-email](https://pypi.org/project/find-github-email/)
 
 > package structure:
@@ -128,3 +146,6 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## License
 [MIT](https://github.com/UdhavPawar/find_github_email/blob/master/LICENSE)
+
+## Acknowledgement 
+[Sourcecon](https://www.sourcecon.com/how-to-find-almost-any-github-users-email-address/)
