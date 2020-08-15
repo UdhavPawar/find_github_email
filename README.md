@@ -31,7 +31,7 @@
 
 Install package use the package manager [pip](https://pypi.org/project/find-github-email/).
 
-> python
+> python2
 
 ![python](./svgs/py2install.svg)
 ```bash
@@ -57,14 +57,26 @@ python3 -m pip install find-github-email
 
 ## How To Use
 
-Example how to use the package
+Follow these steps
 
 ![example](./svgs/run.svg)
 
-> run.py
+> python2 run.py
+```python
+# python sample code to use "find_github_email" package
 
+# import package
+import find_github_email
+
+# read GitHub username from user
+username = raw_input("\nEnter GitHub username: ")
+
+response = find_github_email.find(username)
+print "\n",response,"\n"
+```
+> python3 run.py
 ```python3
-# sample code to use "find_github_email" package
+# python3 sample code to use "find_github_email" package
 
 # import package
 import find_github_email
