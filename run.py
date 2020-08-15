@@ -1,4 +1,4 @@
-# sample code to use "find_github_email" package
+# python3 sample code to use "find_github_email" package
 
 # import package
 import find_github_email

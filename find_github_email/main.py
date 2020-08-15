@@ -4,14 +4,15 @@ import time # for measuring execution time
 class findGitEmail(object):
     def __init__(self, username):
         self.git_username = username
+        self.apiURL = "https://api.github.com"
 
     def get(self):
         return self.__checkUserExists()
 
     # check input github username exists
     def __checkUserExists(self):
-        githubAPI = f"https://api.github.com/users/{self.git_username}"
-        response = requests.get(githubAPI)
+
+        response = requests.get(self.apiURL + "/users/" + self.git_username)
         response_json = response.json()
 
         # user exists and github API rate limit is not exceeded
@@ -22,10 +23,10 @@ class findGitEmail(object):
             return emails
         # user exists and github API rate limit is exceeded for the user
         elif str(response_json["message"]).startswith("API"):
-            return f'{response_json["message"]} Documentation URL: {response_json["documentation_url"]}'
+            return response_json["message"] + " Documentation URL: " + response_json["documentation_url"]
         # user does not exist
         else:
-            return f'Provided github username: "{self.git_username}" does not exists.'
+            return "Provided github username: " + self.git_username + " does not exists."
 
     # get email address
     def __getEmail(self):
@@ -33,12 +34,12 @@ class findGitEmail(object):
         emails = []
 
         # check user's non-forked public repos
-        reposURL = f"https://api.github.com/users/{self.git_username}/repos"
+        reposURL = self.apiURL + "/users/" + self.git_username + "/repos"
         repos = requests.get(reposURL).json()
         for repo in repos:
             repo_name = repo["name"]
             if repo["fork"] == False:
-                commitsURL = f"https://api.github.com/repos/{self.git_username}/{repo_name}/commits"
+                commitsURL = self.apiURL + "/repos/" + self.git_username + "/" + repo_name + "/commits"
                 commits = requests.get(commitsURL).json()
                 for commit in commits:
                     commit_email = commit["commit"]["author"]["email"]
@@ -49,7 +50,7 @@ class findGitEmail(object):
             return emails
 
         # check user's public commits
-        commitsURL = f"https://api.github.com/users/{self.git_username}/events/public"
+        commitsURL = self.apiURL + "/users/" + self.git_username + "/events/public"
         payloads = requests.get(commitsURL).json()
         for payload in payloads:
             if payload["type"] == "PushEvent":
@@ -61,7 +62,7 @@ class findGitEmail(object):
         if len(emails)!= 0:
             return emails
         else:
-            return emails.append(f'User: "{self.git_username}" has no public commits or a non-forked public repo')
+            return emails.append("User: " + self.git_username + " has no public commits or a non-forked public repo")
 
 def find(username):
     finder_response = findGitEmail(username).get()
