@@ -4,7 +4,7 @@
 <!-- Labels -->
 <p align="center">
     <img src="https://img.shields.io/badge/package-pip-blue.svg?style=flat">
-    <img src="https://img.shields.io/badge/version-1.2.2-blueviolet.svg?style=flat">
+    <img src="https://img.shields.io/badge/version-1.2.4-blueviolet.svg?style=flat">
     <img src="https://img.shields.io/badge/code-python-orange.svg?style=flat">
     <img src="https://img.shields.io/badge/code-python3-yellow.svg?style=flat">
     <img src="https://img.shields.io/badge/build-passing-green.svg?style=flat">
