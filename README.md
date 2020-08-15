@@ -91,7 +91,40 @@ print(f"\n{response}\n")
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change/fix.
 
 ## Package
-[PyPi](https://pypi.org/project/find-github-email/)
+> package PyPi project: [find-github-email](https://pypi.org/project/find-github-email/)
+
+> package structure:
+```
+.
+├── LICENSE
+├── README.md
+├── dist
+│   └── find_github_email-1.2.5.tar.gz
+├── find_github_email
+│   ├── __init__.py
+│   ├── __init__.pyc
+│   ├── __pycache__
+│   │   ├── __init__.cpython-37.pyc
+│   │   └── main.cpython-37.pyc
+│   ├── main.py
+│   └── main.pyc
+├── find_github_email.egg-info
+│   ├── PKG-INFO
+│   ├── SOURCES.txt
+│   ├── dependency_links.txt
+│   ├── requires.txt
+│   └── top_level.txt
+├── py2-run.py
+├── requirements.txt
+├── run.py
+├── setup.py
+└── svgs
+    ├── py2install.svg
+    ├── py3install.svg
+    └── run.svg
+
+5 directories, 21 files
+```
 
 ## License
 [MIT](https://github.com/UdhavPawar/find_github_email/blob/master/LICENSE)
