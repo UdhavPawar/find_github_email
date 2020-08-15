@@ -57,8 +57,6 @@ python3 -m pip install find-github-email
 
 ## How To Use
 
-Follow these steps
-
 ![example](./svgs/run.svg)
 
 > python2 run.py
