@@ -11,9 +11,10 @@
     <img src="https://img.shields.io/badge/license-MIT-ff69b4.svg?style=flat">
 </p>
 
+<!-- Jumpers -->
 <p align="center">
   <a href="#application">Application</a> •
-  <a href="installation">Installation</a> •
+  <a href="#installation">Installation</a> •
   <a href="#how-to-use">How To Use</a> •
   <a href="#contributing">Contribute</a> •
   <a href="#package">Package</a>
