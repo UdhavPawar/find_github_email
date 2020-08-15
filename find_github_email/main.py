@@ -23,7 +23,7 @@ class findGitEmail(object):
             return emails
         # user exists and github API rate limit is exceeded for the user
         elif str(response_json["message"]).startswith("API"):
-            return response_json["message"] + " Documentation URL: " + response_json["documentation_url"]
+            return str(response_json["message"] + " Documentation URL: " + response_json["documentation_url"])
         # user does not exist
         else:
             return "Provided github username: " + self.git_username + " does not exists."
@@ -44,7 +44,7 @@ class findGitEmail(object):
                 for commit in commits:
                     commit_email = commit["commit"]["author"]["email"]
                     if commit_email not in emails:
-                        emails.append(commit_email)
+                        emails.append(str(commit_email))
 
         if len(emails) != 0:
             return emails
@@ -55,7 +55,7 @@ class findGitEmail(object):
         for payload in payloads:
             if payload["type"] == "PushEvent":
                 data = payload["payload"]
-                payload_email = data["commits"][0]["author"]["email"]
+                payload_email = str(data["commits"][0]["author"]["email"])
                 if payload_email not in emails:
                     emails.append(payload_email)
 
@@ -67,6 +67,7 @@ class findGitEmail(object):
 
 def find(username):
     finder_response = findGitEmail(username).get()
+    print("running try version")
     if type(finder_response) is list:
         response = {
             'found' : True,
