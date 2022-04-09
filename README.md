@@ -1,5 +1,7 @@
 <!-- Header -->
-# [Find GitHub Email](https://github.com/UdhavPawar/find-github-email) &nbsp; [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Find%20any%20github%20user's%20email&url=https://github.com/UdhavPawar/find-github-email&hashtags=github,github-profile,github-email,python3,pypi)
+<h1 align="center"><a href="https://github.com/UdhavPawar/find-github-email">Find GitHub Email</a></h1>
+<!-- Description -->
+<h3 align="center"> Find any <a href="https://github.com/" target="_blank">GitHub</a> user’s email address</h3>
 
 <!-- Labels -->
 <p align="center">
