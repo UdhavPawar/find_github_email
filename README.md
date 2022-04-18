@@ -27,7 +27,7 @@
 - GitHub brings together the world's largest community of developers to discover, share, and build better software. 
 - GitHub profiles often include an email address, twitter handle, and/or link to a personal website. 
 - However, some of the best profiles simply have no contact information apart from a GitHub username. 
-- Hence, this python package is targetted for finding almost any GitHub user's email address, so you can easliy network/reach out to your favorite developers :bowtie::bow:
+- Hence, this python package is targetted for finding almost any GitHub user's email address, so you can easily network/reach out to your favorite developers :bowtie::bow:
 
 ## Installation
 
