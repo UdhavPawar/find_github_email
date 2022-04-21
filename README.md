@@ -18,8 +18,8 @@
   <a href="#application">Application</a> •
   <a href="#installation">Installation</a> •
   <a href="#how-to-use">How To Use</a> •
-  <a href="#contributing">Contribute</a> •
-  <a href="#package">Package</a>
+  <a href="#how-it-works">How It Works</a> •
+  <a href="#contributing">Contribute</a>
 </p>
 
 ## Application
@@ -89,10 +89,7 @@ print(f"\n{response}\n")
 ```
 > Facing an issue? Check the [Issues](https://github.com/UdhavPawar/find_github_email/issues) section or open a new issue.
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change/fix.
-
-## Package
+## How It Works
 
 
 How the code works:
@@ -145,6 +142,9 @@ case 2 :
 
 5 directories, 21 files
 ```
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change/fix.
 
 ## License
 [MIT](https://github.com/UdhavPawar/find_github_email/blob/master/LICENSE)
