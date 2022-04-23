@@ -67,7 +67,6 @@ class findGitEmail(object):
 
 def find(username):
     finder_response = findGitEmail(username).get()
-    print("running try version")
     if type(finder_response) is list:
         response = {
             'found' : True,
